@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background: url(https://i.ibb.co/ySK80Xj/cancha-tenis-cenital2.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "main"
+    "footer" 
+    ;
+}
+
+#header{
+    grid-area: header;
+    height: 20vh;
+}
+
+.header--fondo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(0,255,0,0.5);
+    height: 5em;
+    align-items: center; 
+}
+
+.header__logo{
+    margin: 20px;
+}
+#header div a img{
+    height: 5em;
+    border-radius: 2.5em;
+}
+
+.nav{
+    justify-self: end;
+}
+
+@media only screen and (max-width: 450px) {
+    .nav{
+        font-size: 12px;
+    }
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li a{
+    text-decoration: none;    
+}
+
+/*Este es el estilo de MAIN*/
+
+#main{
+    display: flex;
+    grid-area: main;
+    height: 60vh;
+    justify-content:center;
+}
+
+#main section h1{
+    text-align: center;
+}
+
+/* index.html */
+
+.main__section__index--descripcion{
+    height: 40vh;
+}
+
+.main__section__index--imagen{
+    justify-content: center;
+    height: 40vh;
+}
+
+.main__section__index--imagen img{
+    height: 100%;
+}
+
+
+/* HorariosCLASES.html */
+
+.main__horarios{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.main__horarios--titulo{
+    margin: 0 auto;
+    grid-area: titulo;
+}
+
+.main__horarios--categorias{
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    grid-area: categorias;
+
+}
+
+.main__horarios--categorias ul{
+    padding: 0px;
+}
+
+.main__horarios--categorias ul li{
+    list-style: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+}
+
+.main__horarios--categorias ul li:hover{
+    color: rgb(255,255,255);
+    background-color: rgba(255,0,0,0.5);
+}
+
+.main__horarios--turnos{
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    grid-area: turnos;
+}
+
+.main__horarios--turnos ul{
+    padding: 0px;
+}
+
+.main__horarios--turnos ul li{
+    list-style: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+}
+
+.main__horarios--turnos ul li:hover{
+    color: rgb(255,255,255);
+    background-color: rgba(0,0,0,0.5);
+}
+/*Este es el estilo GENERAL de FOOTER*/
+
+
+#footer{
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 162, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer div li{
+    list-style: none;
+}
+
+footer div li a{
+    text-decoration: none;
+}
+
+footer div div{
+    display: flex;
+    justify-content: center;
+}
+
+footer div div a img{
+    margin: 10px;
+}
+
+.footer__links{
+    border: solid 1px black;
+}
+
+.img__redes {
+    width: 26px;
+    height: 26px;
+}
+
+.img_footer{
+    width: 64px;
+    height: 64px;
+    border-radius: 55px;
+}
+
+@media only screen and (min-width:768px){
+    .main__horarios{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 16px 1fr;
+        grid-template-areas: 
+        "titulo" "titulo"
+        "categorias" "turnos"
+        ; 
+    }
+    .main__horarios--titulo{
+        grid-area: titulo;
+    }
+    .main__horarios--categorias{
+        grid-area: categorias;
+  }
+    .main__horarios--turnos{
+        grid-area: turnos;  
+    }
+}
+/* COMIENZA EL ESTILO DEL HEADER */
+/* 
+header{
+    font-size: 10px;
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    background-color: #8df638;
+    margin: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+header div img{
+    border-radius: 55px;
+    margin: 5px;
+    width: 80px;
+}
+
+header nav{
+    margin: auto;
+}
+
+header nav div ul{
+    margin: 5px;
+}
+
+header nav div ul li{
+    display: inline-block;
+    font-size: 2em;
+}
+
+header nav div ul li a{
+    text-decoration: none;
+} */
+
+/* COMIENZA LOS ESTILOS DEL MAIN DE TODAS LAS PÁGINAS */
+
+/*Comienza el estilo de index.html*/
+
+/* .main__section__index--saludo{
+    margin: auto;
+}
+
+main section{
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+}
+
+main section h2{
+    font-style: italic;
+    color: #000;
+}
+
+.main__section__index{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid  #000;
+    margin: 5px;
+}
+
+.main__section__index--descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__section__index--imagen{
+    justify-content: center;
+    height: 300px;
+}
+
+.main__section__index--texto{
+    font-size: 40px;
+    color: #000;
+    width: 30%;
+} */
+
+/*Comienza el estilo de horariosClases.html*/
+
+/*estilo general para horariosClases.html y horariosCancha.html*/
+
+/* .horarios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+} */
+
+/* Fin de estilo general para horariosClases.html y turnosCancha.html*/
+/* 
+.horarios--categorias{
+    border: 5px solid #000;
+    width: 50%;
+}
+
+.horarios--categorias2{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;    
+}
+
+.horarios--categorias2 li:hover{
+    border: 2px solid #0f0;
+}
+
+.horarios--turnos{
+    border: 5px solid #f00;
+    width: 50%;  
+}
+
+.horarios--turnos2{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+} */
+
+/*Comienza el estilo de turnosCanchas.html*/
+
+/* .horarios--horarioCancha{
+    display: flex;
+    flex-direction: column;
+}
+
+.horarios--tipoCancha2 {
+    list-style-type: none;
+}
+
+
+.horarios--horarioCancha2{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* Comienza el estilo de torneos.html */
+
+/* .main__torneos{
+    border: 4px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main__torneos--h2{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.main__torneos--catFed{
+    border: 2px solid #000;
+    display: flex;
+    width: 40px;   
+    height: 40px;
+}
+
+.main__torneos--recreativos{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* Comienza estilos de Contacto.html*/
+/* 
+.main__contacto{
+    display: flex;
+    justify-content: center;
+}
+
+.main__contacto--contenedor{
+    border: 2px solid #66f;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.main__contacto--form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+/* COMIENZA EL ESTILO DEL FOOTER */
+
+/* footer{
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5500;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+footer div li{
+    list-style: none;
+}
+
+footer div li a{
+    text-decoration: none;
+}
+
+footer div div{
+    display: flex;
+    justify-content: center;
+}
+
+footer div div a img{
+    margin: 10px;
+}
+
+.img{
+    width: 26px;
+    height: 26px;
+}
+
+.img_footer{
+    width: 64px;
+    height: 64px;
+    border-radius: 55px;
+}
+
+  */
