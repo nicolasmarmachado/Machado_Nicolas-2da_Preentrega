@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body{
-    background: url(https://i.ibb.co/ySK80Xj/cancha-tenis-cenital2.jpg);
+    /* background: url(https://i.ibb.co/ySK80Xj/cancha-tenis-cenital2.jpg); */
+    background: url(/assets/imágenes/descarga.png);
     background-repeat: repeat;
     background-size: auto;
     margin: 0;
@@ -98,18 +99,26 @@ body{
     width: 100%;
     flex-direction: column;
     margin: auto;
+    /* border: 1px solid red; */
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0px auto auto auto;
 }
 
 .main__horarios--titulo{
     margin: 0 auto;
     grid-area: titulo;
+    /* border: 1px solid black; */
+
 }
 
 .main__horarios--categorias{
     font-size: 1em;
     text-decoration: none;
     text-align: center;
+    /* margin: 100px 0px 0px 0px; */
     grid-area: categorias;
+    /* border: 1px solid black; */
 
 }
 
@@ -134,6 +143,8 @@ body{
     text-decoration: none;
     text-align: center;
     grid-area: turnos;
+    /* border: 1px solid black; */
+
 }
 
 .main__horarios--turnos ul{
@@ -181,10 +192,6 @@ footer div div a img{
     margin: 10px;
 }
 
-.footer__links{
-    border: solid 1px black;
-}
-
 .img__redes {
     width: 26px;
     height: 26px;
@@ -196,25 +203,37 @@ footer div div a img{
     border-radius: 55px;
 }
 
+.nav-2{
+    padding: 4px 16px;  
+}
+
+
 @media only screen and (min-width:768px){
     .main__horarios{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 16px 1fr;
-        grid-template-areas: 
-        "titulo" "titulo"
-        "categorias" "turnos"
-        ; 
+        display: flex;
+        flex-direction: column;
     }
-    .main__horarios--titulo{
-        grid-area: titulo;
+
+    .main__horarios--cajas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
     }
     .main__horarios--categorias{
-        grid-area: categorias;
-  }
-    .main__horarios--turnos{
-        grid-area: turnos;  
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        height: 300px;
+        padding: 0px 100px ;
+
     }
+    
+    .main__horarios--turnos{
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        height: 300px;
+        padding: 0px 100px ;
+
+        }
 }
 /* COMIENZA EL ESTILO DEL HEADER */
 /* 
