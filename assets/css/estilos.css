@@ -62,7 +62,7 @@ body{
 #main{
     display: flex;
     grid-area: main;
-    height: 60vh;
+    /* height: 60vh; */
     justify-content:center;
 }
 
@@ -78,7 +78,7 @@ body{
 }
 
 .main__section__index--descripcion{
-    height: 40vh;
+    /* height: 40vh; */
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -88,11 +88,11 @@ body{
 
 .main__section__index--imagen{
     justify-content: center;
-    height: 40vh;
+    /* height: 40vh; */
 }
 
 .main__section__index--imagen img{
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* HorariosCLASES.html */
