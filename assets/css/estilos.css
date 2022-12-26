@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
 
 body{
-    /* background: url(https://i.ibb.co/ySK80Xj/cancha-tenis-cenital2.jpg); */
     background: url(/assets/imágenes/descarga.png);
     background-repeat: repeat;
     background-size: auto;
@@ -49,12 +49,6 @@ body{
     justify-self: end;
 }
 
-@media only screen and (max-width: 450px) {
-    .nav{
-        font-size: 12px;
-    }
-}
-
 .nav ul li{
     display: inline-block;
 }
@@ -78,8 +72,18 @@ body{
 
 /* index.html */
 
+.bienvenido{
+    display: flex;
+    flex-direction: column;
+}
+
 .main__section__index--descripcion{
     height: 40vh;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .main__section__index--imagen{
@@ -91,7 +95,6 @@ body{
     height: 100%;
 }
 
-
 /* HorariosCLASES.html */
 
 .main__horarios{
@@ -99,7 +102,6 @@ body{
     width: 100%;
     flex-direction: column;
     margin: auto;
-    /* border: 1px solid red; */
     height: 100%;
     justify-content: flex-start;
     margin: 0px auto auto auto;
@@ -108,18 +110,20 @@ body{
 .main__horarios--titulo{
     margin: 0 auto;
     grid-area: titulo;
-    /* border: 1px solid black; */
 
+}
+
+.main__horarios--categorias, .main__horarios--turnos{
+    border: 3px solid rgba(0,255,0,0.5);
+    text-align: center;
+    margin: 20px;
 }
 
 .main__horarios--categorias{
     font-size: 1em;
     text-decoration: none;
     text-align: center;
-    /* margin: 100px 0px 0px 0px; */
     grid-area: categorias;
-    /* border: 1px solid black; */
-
 }
 
 .main__horarios--categorias ul{
@@ -143,8 +147,6 @@ body{
     text-decoration: none;
     text-align: center;
     grid-area: turnos;
-    /* border: 1px solid black; */
-
 }
 
 .main__horarios--turnos ul{
@@ -162,8 +164,90 @@ body{
     color: rgb(255,255,255);
     background-color: rgba(0,0,0,0.5);
 }
-/*Este es el estilo GENERAL de FOOTER*/
 
+/* Estilo de turnosCanchas.html */
+
+.horarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horarios__instrucciones{
+    text-align: center;
+    font-family: 'Unbounded', cursive;
+    font-size: 20px;
+    position: relative;
+    animation: balanceo 4s infinite;
+    transition: 0.3s;
+    color: rgba(255, 0, 0, 0.7);
+}
+
+@keyframes balanceo{
+    0%{left: -5px;}
+    25%{left: 5px; top: 0px;}
+    50%{left: 5px; top: 5px;}
+    75%{left: -5px; top: 5px;}
+    100%{left: -5px; top: 0px}
+}
+
+.horarios--tipoCancha, .horarios--horarioCancha, .horarios--horasCancha2{
+    border: 3px solid rgba(255, 162, 0, 0.5);
+    text-align: center;
+    margin: 5px auto 5px auto;
+
+}
+
+.horarios--tipoCancha2 li{
+    list-style: none;
+}
+
+.horarios--tipoCancha2 li:hover{
+    background-color: rgba(255,0,0,0.5);
+}
+
+/* Estilo torneos.html */
+
+.main__torneos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__torneos--federados, .main__torneos--recreativos{
+    border: 3px solid rgba(0,255,0,0.5);
+    text-align: center;
+    margin: 20px;
+}
+
+.main__torneos--federados h2, .main__torneos--recreativos h2{
+    text-align: center;
+}
+
+.main__torneos--federados li, .main__torneos--recreativos li{
+    list-style: none;
+}
+
+/* Estilos contacto.html */
+
+.main__contacto--contenedor{
+    margin: 0px 50px 50px;
+}
+
+.main__contacto--form{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(255, 162, 0, 0.5);
+    background-color: rgba(255, 162, 0, 0.5 );
+    padding: 20px;
+}
+
+.main__contacto--datos{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Este es el estilo GENERAL de FOOTER*/
 
 #footer{
     display: flex;
@@ -173,6 +257,7 @@ body{
     background-color: rgba(255, 162, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+    position: relative;
 }
 
 footer div li{
@@ -207,8 +292,15 @@ footer div div a img{
     padding: 4px 16px;  
 }
 
+@media only screen and (max-width: 450px) {
+    .nav{
+        font-size: 12px;
+    }
+}
 
 @media only screen and (min-width:768px){
+    /* Estilos horariosClases.html */
+    
     .main__horarios{
         display: flex;
         flex-direction: column;
@@ -222,18 +314,107 @@ footer div div a img{
         align-items: center;
     }
     .main__horarios--categorias{
-        border: 3px solid rgba(255, 162, 0, 0.5);
-        height: 300px;
+        border: 3px solid rgba(0,255,0,0.5);
+        height: 250px;
         padding: 0px 100px ;
 
     }
     
     .main__horarios--turnos{
-        border: 3px solid rgba(255, 162, 0, 0.5);
-        height: 300px;
+        border: 3px solid rgba(0,255,0,0.5);
+        height: 250px;
         padding: 0px 100px ;
 
-        }
+    }
+
+    /* turnosCanchas.html */
+
+    .horarios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px 1fr;
+    }
+    
+    .container__horariosCanchas{
+        display: flex;
+        grid-column: 1/4;
+        justify-content: space-around;
+    }
+    
+    .horarios__instrucciones{
+        grid-column: 1/4;
+    }
+    
+    .horarios--tipoCancha {
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        height: 300px;
+        padding: 50px 50px;
+    
+    }
+    
+    .horarios--horarioCancha {
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        height: 300px;
+        padding: 50px 50px;
+    
+    }
+    
+    .horarios--tipoCancha2 li {
+        text-align: center;
+    }
+    
+    .horarios--horasCancha2 {
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        text-align: center;
+        height: 300px;
+        padding: 87px 50px 50px 50px;
+    }
+    
+    .horarios--tipoCancha2 li:hover{
+        color: rgb(255,255,255);
+        /* background-color: rgba(255,0,0,0.5); */
+    }
+
+    /* Estilo torneos.html */
+
+    .main__torneos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .main__torneos--federados{
+        border: 3px solid rgba(0,255,0,0.5);
+        text-align: center;
+        height: 300px;
+        margin: 20px;
+        padding: 50px 100px;
+    }
+    
+    .main__torneos--recreativos{
+        border: 3px solid rgba(0,255,0,0.5);
+        text-align: center;
+        margin: 20px;
+        height: 300px;
+        padding: 0px 100px;
+        margin: 20px;
+        padding: 50px 100px;
+    }
+
+/* Estilos contacto.html */
+
+    .main__contacto--form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 3px solid rgba(255, 162, 0, 0.5);
+        background-color: rgba(255, 162, 0, 0.5 );
+    }
+
+    .main__contacto--datos{
+        margin: 20px;
+    }
 }
 /* COMIENZA EL ESTILO DEL HEADER */
 /* 
