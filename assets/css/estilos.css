@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
 
 body{
-    background: url(/assets/imágenes/descarga.png);
+    background: url(../imágenes/descarga.jpg);
     background-repeat: repeat;
     background-size: auto;
     margin: 0;
@@ -62,7 +62,6 @@ body{
 #main{
     display: flex;
     grid-area: main;
-    /* height: 60vh; */
     justify-content:center;
 }
 
@@ -78,7 +77,6 @@ body{
 }
 
 .main__section__index--descripcion{
-    /* height: 40vh; */
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -88,7 +86,6 @@ body{
 
 .main__section__index--imagen{
     justify-content: center;
-    /* height: 40vh; */
 }
 
 /* HorariosCLASES.html */
@@ -106,7 +103,6 @@ body{
 .main__horarios--titulo{
     margin: 0 auto;
     grid-area: titulo;
-
 }
 
 .main__horarios--categorias, .main__horarios--turnos{
